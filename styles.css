@@ -1,0 +1,187 @@
+body {
+    font-family: Arial, sans-serif;
+    padding: 20px;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header button {
+    border-radius: 3px;
+    width: 45px;
+    height: 45px;
+}
+
+.input-section {
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+input,
+select {
+    padding: 10px;
+    margin: 5px 0;
+    width: 100%;
+    /* Full width on mobile */
+    border: #282828 solid 3px;
+    border-radius: 5px;
+}
+
+button {
+    padding: 10px;
+    margin: 5px 0;
+    background-color: #66b3ff;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    border-radius: 3px;
+    width: 100%;
+    /* Full width on mobile */
+}
+
+button:hover {
+    background-color: #00509e;
+    color: white;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+li {
+    padding: 10px;
+    background-color: whitesmoke;
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-left: 5px solid;
+    color: #002346;
+}
+
+li.completed {
+    text-decoration: line-through;
+    color: gray;
+}
+
+.task-date,
+.due-date {
+    font-size: 12px;
+    color: #555;
+    display: block;
+}
+
+.category-personal {
+    border-left-color: #ffe6e6;
+}
+
+.category-work {
+    border-left-color: #e6f7ff;
+}
+
+.category-urgent {
+    border-left-color: #ffcccc;
+}
+
+.priority-high {
+    border-left: 5px solid red;
+}
+
+.priority-medium {
+    border-left: 5px solid yellow;
+}
+
+.priority-low {
+    border-left: 5px solid green;
+}
+
+body.dark-mode {
+    background-color: #2c2c2c;
+    color: white;
+}
+
+.archived-section {
+    margin-top: 40px;
+}
+
+/* Responsive Styles */
+@media (min-width: 600px) {
+    .input-section {
+        flex-direction: row;
+        /* Align elements in a row on larger screens */
+    }
+
+    input,
+    select,
+    button {
+        width: auto;
+        /* Reset width for larger screens */
+        margin: 5px;
+        /* Add margin for spacing */
+    }
+
+    #add-task-btn {
+        width: auto;
+        /* Reset width for larger screens */
+    }
+
+    .filters {
+        margin-top: 20px;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    button#sort-date,
+    button#sort-priority {
+        margin: 0 5px;
+        /* Add some margin for spacing */
+    }
+}
+
+@media (max-width:600px) {
+
+    .taskInput {
+        width: inherit;
+    }
+
+    select {
+        width: 100%;
+        padding: 10px;
+    }
+
+    .due-date {
+        width: inherit;
+    }
+
+    .filters {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 5px;
+    }
+
+    .filters button {
+        padding: 10px;
+    }
+
+    .task-list {
+        text-align: center;
+    }
+
+    .task-list li  {
+        display: block;
+    }
+    .archived-tasks li{
+        display: block;
+        text-align: center;
+    }
+
+    span .task-date {
+        display: block;
+    }
+}
